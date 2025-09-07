@@ -1,0 +1,4624 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartikeya’s Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="Favicon/favicon-96x96.png"
+    />
+    <link rel="icon" href="Favicon/favicon.ico" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="Favicon/android-icon-36x36.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="Favicon/android-icon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="72x72"
+      href="Favicon/android-icon-72x72.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="Favicon/android-icon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="Favicon/android-icon-144x144.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Favicon/android-icon-192x192.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="Favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="Favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="Favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="Favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="Favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="Favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="Favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="Favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Favicon/apple-icon-180x180.png"
+    />
+    <link rel="apple-touch-icon" href="Favicon/apple-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="Favicon/apple-icon.png" />
+
+    <meta name="msapplication-TileImage" content="Favicon/ms-icon-70x70.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-144x144.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-150x150.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-310x310.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/542131e2b7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #10121b;
+      }
+    </style>
+
+    <style>
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .glass-animated {
+        position: relative;
+        background: linear-gradient(
+          130deg,
+          rgba(255, 255, 255, 0.05) 0%,
+          rgba(255, 255, 255, 0.1) 25%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.1) 75%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        background-size: 400% 100%;
+        animation: shimmer 10s ease-in-out infinite;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+
+      .glass-animated:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .fade-element {
+        opacity: 1;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
+  </head>
+  <body class="text-white">
+    <div id="loading-circle" class="loading-circle">
+      <div class="elegant-spinner"></div>
+    </div>
+
+    <div class="container_universal_hidden">
+      <div class="god_nav">
+        <nav>
+          <div class="wrapper">
+            <div class="options">
+              <div class="logo">
+                <a href="#">Kartikeya</a>
+              </div>
+              <div id="openMobileMenu" class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#updates">Updates</a></li>
+
+              <li>
+                <a href="https://github.com/KartikeyaLab" target="_blank"
+                  >Github</a
+                >
+              </li>
+
+              <li class="search_botton">
+                <a href="#" onclick="focusSearchBar(event)">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div id="mobileMenu" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <button id="closeMobileMenu" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#updates">Updates</a></li>
+
+          <li>
+            <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
+          </li>
+        </ul>
+      </div>
+
+      <section
+        class="flex-grow flex flex-col justify-center items-center text-center px-6 header fade-element"
+      >
+        <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-none">
+          Hi, I'm Kartikeya
+        </h2>
+        <p class="text-zinc-400 text-base md:text-lg fade-element">
+          It all started with an idea!
+        </p>
+        <!-- <p class="text-zinc-400 text-base md:text-lg fade-element">
+          If it can be built or broken, I’m on it!
+        </p> -->
+
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 md:gap-6 pr-6 pl-6 pt-5 pb-5 mt-4 rounded-[3.5rem] bg-white/10 backdrop-blur-md border border-white/20 shadow-lg max-w-3xl mx-auto"
+        >
+          <a
+            href="mailto:kartikeya30062009@gmail.com"
+            class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+            title="Email me"
+          >
+            <div
+              class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fa-solid fa-envelope text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+            ></i>
+          </a>
+
+          <a
+            href="https://kartikeya.onrender.com/"
+            target="_blank"
+            class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+            title="Publish Website"
+          >
+            <div
+              class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fa-solid fa-cloud text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+            ></i>
+          </a>
+
+          <a
+            href="https://github.com/KartikeyaLab"
+            target="_blank"
+            class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+            title="GitHub"
+          >
+            <div
+              class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fa-brands fa-github text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+            ></i>
+          </a>
+
+          <a
+            href="https://kartikeyalab.github.io/PortfolioBuilder/"
+            target="_blank"
+            class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+            title="Website Builder"
+          >
+            <div
+              class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fa-solid fa-globe text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+            ></i>
+          </a>
+        </div>
+        <div class="transparent_overlay"></div>
+      </section>
+
+      <section
+        id="about"
+        class="px-6 pt-[8rem] py-24 max-w-3xl mx-auto text-center"
+      >
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4"
+        >
+          About Me
+        </h3>
+
+        <p class="dim_text mb-8 text-base">I am Kartikeya!</p>
+        <div
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose space-y-6"
+        >
+          <p>I was born 282 years after the death of Sir Isaac Newton.</p>
+        </div>
+      </section>
+
+      <section id="projects" class="px-6 pt-[8rem] py-24 max-w-5xl mx-auto">
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4 text-center"
+        >
+          Projects
+        </h3>
+        <p class="dim_text text-center mb-8 text-base">My latest inventions.</p>
+
+        <div class="mb-10 text-center">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search projects..."
+            class="w-full md:w-1/2 px-5 py-3 rounded-3xl text-white bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_4px_30px_rgba(0,0,0,0.1)] placeholder:text-zinc-400 outline-none ring-0 focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-300 transition-all duration-300 ease-in-out hover:bg-white/20 hover:border-white/30"
+          />
+        </div>
+
+        <div class="grid gap-10 md:grid-cols-2">
+          <!-- Put code here -->
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Yt Thumbnail
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A sleek, privacy-focused web application for downloading YouTube
+              video thumbnails in the highest available resolution. Built with
+              vanilla HTML, CSS (Tailwind), and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: June 13, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/yt-thumbnail"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/yt-thumbnail/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/yt-thumbnail/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Luna
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Luna is a smart personal assistant built with Python, Flask, and
+              TensorFlow. It runs in your browser using HTML, CSS, and
+              JavaScript (with jQuery) to chat and understand what you say.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: May 18, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Luna"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Luna/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Portfoliobuilder
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Build personal websites using HTML, CSS, and JavaScript with this
+              Portfoliobuilder project.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: May 12, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/PortfolioBuilder"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/PortfolioBuilder/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/PortfolioBuilder/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Portfolio Template
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              This project serves as a base for creating, visually appealing,
+              and responsive personal or professional portfolio websites.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: May 09, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/portfolio-template"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/portfolio-template/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/portfolio-template/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Dictation
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Interactive Text-to-Speech Transcription Web Application using
+              HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: April 14, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/dictation"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/dictation/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/dictation/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Bookshelf
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Interactive web application for organizing personal books using
+              HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: April 12, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Bookshelf"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Bookshelf/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Bookshelf/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Kartikeyadrive
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              'kartikeyadrive' is a web application developed using HTML, CSS,
+              and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: April 05, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/kartikeyadrive"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/kartikeyadrive/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/kartikeyadrive/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Travel Video Background
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A project offering travel-themed video backgrounds implemented
+              using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Travel-Video-Background"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Travel-Video-Background/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Travel-Video-Background/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Trigya Travels
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Trigya-travels is an interactive travel website built with HTML,
+              CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Trigya-travels"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Trigya-travels/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Trigya-travels/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Travel Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A web application for planning and booking travel accommodations
+              and trips, built using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Travel-Website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Travel-Website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Travel-Website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Text Underline
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A GitHub project named 'Text-underline' is an implementation of
+              underlined text using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Text-underline"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Text-underline/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Text-underline/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Text Portrait
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Create personalized text portraits using customizable HTML, CSS,
+              and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Text-Portrait"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Text-Portrait/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Text-Portrait/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Text Animation
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Text Animation is an interactive project that showcases various
+              styles of animated text using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Text-Animation"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Text-Animation/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Text-Animation/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              S23 Ultra Clone
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              S23-Ultra-Clone is an advanced web cloning project primarily
+              developed with HTML, CSS, and JavaScript for creating
+              high-fidelity replicas of popular websites.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/S23-Ultra-Clone"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/S23-Ultra-Clone/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/S23-Ultra-Clone/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Salon Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A dynamic salon website built using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Salon-website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Salon-website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Salon-website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Responsive Header
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Responsive-header is a GitHub project that offers a customizable,
+              responsive header design utilizing HTML, CSS, and JavaScript for
+              creating adaptable layouts across various screen sizes.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Responsive-header"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Responsive-header/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Responsive-header/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Portfolio Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A personal portfolio website built using HTML, CSS, and
+              JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Portfolio-website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Portfolio-website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Portfolio-website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Page Not Find
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              This GitHub project, 'Page-not-find', appears to be a web
+              development solution focused on creating customizable 404 error
+              pages using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Page-not-find"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Page-not-find/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Page-not-find/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Oppo Website Clone
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              This GitHub project is a clone of the Oppo website, recreated
+              using HTML, CSS, and JavaScript technologies.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Oppo-website-clone"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Oppo-website-clone/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Oppo-website-clone/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Oneplus Clone
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              OnePlus-clone is a replica of the OnePlus user interface built
+              using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/OnePlus-clone"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/OnePlus-clone/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/OnePlus-clone/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Header Design
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A Header-design project focuses on creating customizable and
+              responsive header designs using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Header-design"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Header-design/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Header-design/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Neonbutton
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A project called Neonbutton is an interactive user interface
+              element implemented using HTML, CSS, and JavaScript, featuring a
+              vibrant neon-style design for stylish buttons.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Neonbutton"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Neonbutton/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Neonbutton/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Navigation Bar
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A navigation bar project built with HTML, CSS, and JavaScript,
+              providing UI navigation solutions.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Navigation-bar"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Navigation-bar/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Navigation-bar/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Music Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A collaborative GitHub project for building an interactive music
+              website utilizing HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Music-website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Music-website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Music-website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Modern Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Modern-website is a project primarily constructed using HTML, CSS,
+              and JavaScript, aimed at creating contemporary web layouts.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Modern-website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Modern-website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Modern-website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Iphone14 Clone
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              This GitHub project is an open-source clone of Apple's iPhone 14,
+              built using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Iphone14-clone"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Iphone14-clone/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Iphone14-clone/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Background Video
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Background-Video is an interactive web project showcasing
+              background videos, predominantly built using HTML, CSS, and
+              JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Background-video"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Background-video/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Background-video/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Website Header
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A project dedicated to creating an attractive and responsive
+              website header using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Website-Header"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Website-Header/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Website-Header/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Zflip 4
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A web application development project, 'ZFlip-4', utilizing HTML,
+              CSS, and JavaScript for building user interfaces.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/ZFlip-4"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/ZFlip-4/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/ZFlip-4/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Websiteheader Green
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              WebsiteHeader-Green is a single page web header project built
+              primarily using HTML, CSS, and JavaScript for styling and
+              interactivity.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/WebsiteHeader-Green"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/WebsiteHeader-Green/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/WebsiteHeader-Green/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Galaxy Book3
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Interactive sci-fi themed e-book with dynamic layouts built using
+              HTML, CSS, and JavaScript in Galaxy-Book3.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Galaxy-Book3"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Galaxy-Book3/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Galaxy-Book3/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Emoji Search
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Emoji-Search is an interactive web application that allows users
+              to search for various emojis using HTML, CSS, and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Emoji-Search"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Emoji-Search/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Emoji-Search/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Car Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Car-Website: An interactive web platform primarily built with
+              HTML, CSS, and JavaScript for showcasing various automobile
+              models.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Car-Website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Car-Website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Car-Website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Button Ripple Effect
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Achieve a dynamic button ripple effect using HTML, CSS, and
+              JavaScript in this project.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Button-Ripple-Effect"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Button-Ripple-Effect/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Button-Ripple-Effect/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Windows11 Clone
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              A Windows 11-inspired user interface designed using HTML, CSS, and
+              JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Windows11-clone"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Windows11-clone/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Windows11-clone/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Animated Website
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              An interactive website featuring dynamic content using HTML, CSS,
+              and JavaScript.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Animated-Website"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Animated-Website/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Animated-Website/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Animmated Header
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              Animated Header is an interactive web component utilizing HTML,
+              CSS, and JavaScript to create dynamic header designs that include
+              animations.
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/Animmated-header"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/Animmated-header/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/Animmated-header/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glow-card max-w-xl mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden p-6 transition-all duration-500 hover:scale-[1.015]"
+          >
+            <h4
+              class="text-white text-[1.5rem] font-semibold tracking-tight mb-2 leading-snug line-clamp-2"
+            >
+              Dwps Ashta
+            </h4>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-3">
+              'DWPS-Ashta' is a school website created using HTML, CSS and
+              Javascript
+            </p>
+            <p class="text-zinc-500 text-xs mb-4">Published: March 15, 2025</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >HTML</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >CSS</span
+              >
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >JavaScript</span
+              >
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://github.com/KartikeyaLab/DWPS-Ashta"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >View Project
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/KartikeyaLab/DWPS-Ashta/archive/refs/heads/main.zip"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+                >Download ZIP
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://kartikeyalab.github.io/DWPS-Ashta/"
+                target="_blank"
+                class="group inline-flex items-center gap-1.5 text-blue-300 text-sm hover:text-blue-200 transition"
+              >
+                Live Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mt-px text-inherit transition-transform duration-200 group-hover:translate-x-1 group-hover:scale-105"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- -->
+        </div>
+        <div class="flex justify-center mt-10">
+          <button
+            id="showMoreBtn"
+            class="px-8 py-4 rounded-[2rem] text-white bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-0 focus:ring-white/20 transition-all duration-300 ease-in-out shadow-lg font-medium text-base tracking-wide"
+          >
+            Show More
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" class="px-4 pt-[8rem] pb-24 max-w-5xl mx-auto">
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4 text-center"
+        >
+          Wanna talk?
+        </h3>
+        <p class="dim_text text-center mb-10 text-sm sm:text-base">
+          Wanna talk? Drop a message. I’m 2.71828% friendly.
+        </p>
+
+        <div class="max-w-[60rem] mx-auto px-1">
+          <div
+            class="rounded-[2rem] bg-white/5 backdrop-blur-2xl border border-white/10 p-6 sm:p-8 transition-all duration-500"
+          >
+            <form id="contactForm" class="space-y-6">
+              <!-- Full Name -->
+              <div class="relative group">
+                <label for="name" class="block text-sm mb-2 ml-1 text-zinc-400">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter your name."
+                  required
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition duration-300 placeholder:italic"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="relative group">
+                <label for="name" class="block text-sm mb-2 ml-1 text-zinc-400">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email address."
+                  required
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition placeholder:italic duration-300"
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="relative group">
+                <label for="name" class="block text-sm mb-2 ml-1 text-zinc-400">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  maxlength="500"
+                  placeholder="Wanna talk? This box is for you."
+                  required
+                  oninput="document.getElementById('charCount').innerText = this.value.length + '/500';"
+                  class="peer w-full pt-4 pb-4 pr-6 pl-6 text-white bg-transparent border border-white/10 rounded-[1.4rem] focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/20 transition duration-300 resize-none placeholder:italic"
+                ></textarea>
+
+                <div
+                  class="text-xs text-zinc-500 mt-1 text-right"
+                  id="charCount"
+                >
+                  0/500
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                class="w-full py-3 rounded-[1.3rem] border border-white/15 text-white font-semibold backdrop-blur-md hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/30 button_background tracking-wide"
+              >
+                <div id="loader"></div>
+                <span> Send Message</span>
+              </button>
+
+              <!-- Hidden Fields -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://kartikeyalab.github.io/thankyou/"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Someone Mailed You!"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="message_for_you"
+        class="px-6 py-24 max-w-3xl mx-auto text-center"
+      >
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4"
+        >
+          Gentle Message!
+        </h3>
+        <p class="dim_text mb-8 text-base">Stay as long as you like.</p>
+
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-2 md:mt-3"
+        >
+          Thanks for being here.
+        </p>
+
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-2 md:mt-3"
+        >
+          With love and quiet awe,
+        </p>
+        <div class="sign">Kartikeya</div>
+      </section>
+
+      <section
+        id="updates"
+        class="px-6 pt-[8rem] py-24 max-w-5xl mx-auto text-center"
+      >
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4"
+        >
+          Updates!
+        </h3>
+        <p class="dim_text mb-8 text-base">Stuff I made.</p>
+        <div class="grid gap-10 md:grid-cols-2">
+          <a
+            target="_blank"
+            href="https://kartikeya.onrender.com/"
+            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 bg-white/5 backdrop-blur-2xl backdrop-saturate-90 overflow-hidden transition-all duration-300 transform hover:scale-[1.015] ring-1 ring-inset ring-white/5"
+          >
+            <div class="absolute top-6 right-6 z-10">
+              <span
+                class="text-xs font-semibold text-white bg-white/10 border border-white/20 px-3 py-1.5 rounded-full backdrop-blur-md shadow-sm"
+              >
+                New
+              </span>
+            </div>
+
+            <div class="relative z-10">
+              <h4
+                class="text-white text-3xl sm:text-4xl font-semibold tracking-tight mb-2"
+              >
+                Publish Website
+              </h4>
+              <p class="text-white/50 text-sm mb-1">Updated on Aug 23, 2025</p>
+              <p class="text-white/50 text-sm mb-6 tracking-widest">
+                Version v4.0
+              </p>
+
+              <p
+                class="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl"
+              >
+                Now you can put your website online—totally free. No cost. No
+                stress. Just hit publish and you’re live!
+              </p>
+            </div>
+          </a>
+
+          <a
+            target="_blank"
+            href="https://kartikeyalab.github.io/PortfolioBuilder/"
+            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 bg-white/5 backdrop-blur-2xl backdrop-saturate-90 overflow-hidden transition-all duration-300 transform hover:scale-[1.015] ring-1 ring-inset ring-white/5"
+          >
+            <div class="absolute top-6 right-6 z-10">
+              <span
+                class="text-xs font-semibold text-white bg-white/10 border border-white/20 px-3 py-1.5 rounded-full backdrop-blur-md shadow-sm"
+              >
+                New
+              </span>
+            </div>
+
+            <div class="relative z-10">
+              <h4
+                class="text-white text-3xl sm:text-4xl font-semibold tracking-tight mb-2"
+              >
+                Website Builder
+              </h4>
+
+              <p class="text-white/50 text-sm mb-1">Updated on Aug 23, 2025</p>
+              <p class="text-white/50 text-sm mb-6 tracking-widest">
+                Version v4.0
+              </p>
+
+              <p
+                class="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl"
+              >
+                Build your own personal website—no coding needed, totally free!
+                This Website Builder makes it super easy.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="versiondetails"
+        class="px-6 py-24 max-w-3xl mx-auto text-center"
+      >
+        <h3
+          class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 leading-tight"
+        >
+          Version Spotlight
+        </h3>
+        <p class="text-zinc-400 text-base mb-10">The biggest update yet.</p>
+        <div
+          class="glow-card w-full max-w-4xl mx-auto text-left bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 backdrop-blur-lg shadow-lg"
+        >
+          <!-- Header -->
+          <div class="mb-8">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-xl sm:text-2xl font-semibold text-white">
+                Release <span class="text-blue-400">v4.0</span>
+                <span class="text-zinc-400">Simple One</span>
+              </span>
+              <span
+                class="text-xs bg-white/10 text-white px-2.5 py-0.5 rounded-full font-medium border border-white/20"
+              >
+                Latest
+              </span>
+            </div>
+            <p class="text-sm text-zinc-400 mt-1">
+              Published on August 23, 2025
+            </p>
+          </div>
+
+          <!-- Sections -->
+          <div
+            class="space-y-10 text-sm sm:text-[15px] leading-relaxed text-zinc-300"
+          >
+            <!-- New
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                New
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Version history page added for full transparency</li>
+                <li>– Introduced dedicated “Updates” section</li>
+                <li>
+                  – Applied subtle glassmorphism effects to key components
+                </li>
+              </ul>
+            </section> -->
+
+            <!-- Improvements
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Improvements
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Refined typography scale for improved readability</li>
+                <li>
+                  – Redesigned project cards with consistent spacing and layout
+                </li>
+                <li>
+                  – Contact form layout cleaned with improved input spacing
+                </li>
+                <li>
+                  – Hover and tap animations made smoother across components
+                </li>
+                <li>– Updated video display for more uniform thumbnails</li>
+                <li>– Stability Improvements</li>
+              </ul>
+            </section> -->
+
+            <!-- Mobile & Accessibility
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Mobile & Accessibility
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Enhanced mobile navigation with simplified layout</li>
+                <li>
+                  – Fixed overlapping and scaling issues on smaller devices
+                </li>
+              </ul>
+            </section> -->
+
+            <!-- Optimization -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Optimization
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Page structure improved for faster rendering</li>
+                <li>– Content rewritten!</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        id="footer"
+        class="relative w-full bg-black bg-opacity-90 text-white footer-section"
+      >
+        <div class="space_height_bottom"></div>
+        <div class="transparent_overlay_bottom"></div>
+        <div class="w-full border-b border-zinc-700"></div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between gap-12 px-6 md:px-16 py-12"
+        >
+          <div class="w-full md:w-1/2">
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
+            >
+              About Me
+            </h2>
+            <p class="text-zinc-400 text-base md:text-lg mt-4">
+              I’m Kartikeya — I was born 282 years after the death of Sir Isaac
+              Newton.
+            </p>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
+            >
+              Wanna talk?
+            </h2>
+            <p class="text-zinc-400 text-base md:text-lg mt-4">
+              Let’s build something awesome together—reach out now!
+              <a href="#contact" class="underline">Contact</a>.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-zinc-400"
+        >
+          © <span id="year"></span> Kartikeya. All rights reserved.
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+          }
+
+          formData.append("_captcha", "false");
+          formData.append("_template", "table");
+
+          fetch("https://formsubmit.co/kartikeya30062009@gmail.com", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              console.log("Response Status:", response.status);
+              if (response.ok) {
+                console.log("Form submitted successfully");
+
+                window.location.href =
+                  "https://kartikeyalab.github.io/thankyou/";
+              } else {
+                console.error("Error in form submission:", response.statusText);
+                alert(
+                  "There was an error submitting your form. Please try again later."
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Form submission error:", error);
+              alert("An unexpected error occurred.");
+            });
+        });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const glowCards = document.querySelectorAll(".glow-card");
+
+        glowCards.forEach((card) => {
+          let mouseX = 0,
+            mouseY = 0;
+          let currentX = 0,
+            currentY = 0;
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          });
+
+          function animateGlow() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            card.style.setProperty("--x", `${currentX}px`);
+            card.style.setProperty("--y", `${currentY}px`);
+
+            requestAnimationFrame(animateGlow);
+          }
+
+          animateGlow();
+        });
+      });
+
+      let visibleCards = 4;
+      let defaultVisible = 4;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        applyInitialView();
+        setupNav();
+      });
+
+      function applyInitialView() {
+        const cards = document.querySelectorAll(".project-card");
+        showCards(cards, visibleCards);
+        updateShowMoreButton(cards);
+      }
+
+      function showCards(cards, count) {
+        cards.forEach((card, index) => {
+          if (index < count) {
+            card.style.display = "block";
+
+            void card.offsetWidth;
+
+            card.classList.add("show");
+          } else {
+            card.style.display = "none";
+            card.classList.remove("show");
+          }
+        });
+      }
+
+      function updateShowMoreButton(cards) {
+        const btn = document.getElementById("showMoreBtn");
+        const total = cards.length;
+
+        if (visibleCards >= total) {
+          btn.textContent = "Show Less";
+          btn.onclick = () => {
+            visibleCards = defaultVisible;
+            showCards(cards, visibleCards);
+            updateShowMoreButton(cards);
+          };
+        } else {
+          const remaining = total - visibleCards;
+          btn.textContent = `Show More (${remaining} left)`;
+          btn.onclick = () => {
+            visibleCards += 4;
+            if (visibleCards > total) visibleCards = total;
+            showCards(cards, visibleCards);
+            updateShowMoreButton(cards);
+          };
+        }
+
+        btn.style.display = total > defaultVisible ? "block" : "none";
+      }
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = document.querySelectorAll(".project-card");
+        let matches = 0;
+
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const isVisible = text.includes(query);
+
+          if (isVisible) {
+            card.style.display = "block";
+            card.classList.add("show");
+            matches++;
+          } else {
+            card.style.display = "none";
+            card.classList.remove("show");
+          }
+        });
+
+        if (query === "") {
+          applyInitialView();
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      function setupNav() {
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            document.getElementById("menu-btn").checked = false;
+          });
+        });
+      }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("close-btn").checked = true;
+        });
+      });
+
+      function focusSearchBar(event) {
+        event.preventDefault();
+        document.getElementById("searchInput").focus();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const button = form.querySelector("button[type='submit']");
+        const loader = document.getElementById("loader");
+
+        loader.style.display = "none";
+
+        form.addEventListener("submit", function (e) {
+          loader.style.display = "inline-block";
+          button.disabled = true;
+          button.classList.add("opacity-50", "cursor-not-allowed");
+
+          setTimeout(() => {
+            loader.style.display = "none";
+            button.disabled = false;
+            button.classList.remove("opacity-50", "cursor-not-allowed");
+          }, 2000);
+        });
+      });
+
+      function waitForFontAwesomeIcons(timeout = 5000) {
+        return new Promise((resolve) => {
+          const start = performance.now();
+
+          const observer = new MutationObserver(() => {
+            const icons = document.querySelectorAll(
+              ".fa, .fas, .far, .fal, .fab, .fad"
+            );
+            const allIconsRendered = Array.from(icons).every((icon) =>
+              getComputedStyle(icon)
+                .fontFamily.toLowerCase()
+                .includes("fontawesome")
+            );
+            if (allIconsRendered) {
+              observer.disconnect();
+              resolve();
+            }
+          });
+
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
+
+          setTimeout(() => {
+            observer.disconnect();
+            resolve();
+          }, timeout);
+        });
+      }
+
+      window.onload = () => {
+        const loadingCircle = document.getElementById("loading-circle");
+        const content = document.querySelector(".container_universal_hidden");
+
+        if (loadingCircle) loadingCircle.classList.add("hidden");
+
+        setTimeout(() => {
+          if (content) content.classList.add("show");
+        }, 500);
+      };
+
+      let lastScrollY = window.scrollY;
+
+      function updateFadeOpacity() {
+        const elements = document.querySelectorAll(".fade-element");
+        const currentScrollY = window.scrollY;
+        const scrollingUp = currentScrollY < lastScrollY;
+
+        elements.forEach((el) => {
+          const scrollOffset = currentScrollY;
+
+          let opacity;
+          if (scrollingUp) {
+            opacity = Math.min(1, (500 - scrollOffset) / 80);
+          } else {
+            opacity = Math.max(0, (250 - scrollOffset) / 80);
+          }
+
+          el.style.opacity = opacity.toFixed(2);
+        });
+
+        lastScrollY = currentScrollY;
+      }
+
+      window.addEventListener("scroll", updateFadeOpacity);
+      window.addEventListener("resize", updateFadeOpacity);
+      document.addEventListener("DOMContentLoaded", updateFadeOpacity);
+
+      const openBtn = document.getElementById("openMobileMenu");
+      const closeBtn = document.getElementById("closeMobileMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const navLinks = mobileMenu.querySelectorAll("a");
+
+      openBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
